@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: yellow;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar .active {
+    color: red;
+}
+
+.banner {
+    height: 90vh;
+    background: url('bg.png') no-repeat center center/cover;
+}
+
+.menu-container, .menu-drink {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.menu-card {
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e65c00;
+}
+
+h1{
+    margin: 40px;
+    color: #e65c00;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 4rem 5% 0;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 3rem;
+}
+
+.footer-section h4 {
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p, .footer-section li {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 2rem 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p:first-child {
+    margin-bottom: 0.5rem;
+}

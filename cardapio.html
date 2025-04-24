@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo4.png" type="png">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="transition-overlay"></div> <!-- Efeito de transição -->
+
+    <header>
+        <div class="container">
+            <div id="inicio" class="logo"><img src="assets/logo4.png" width="120px" alt="Logo Égua! Burguer"/></div><!--logo-->
+            
+            <!-- menu hamburguer :O -->
+            <div class="menu-toggle">☰</div>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                    <li><a href="sobrenos.html">Sobre</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="banner"></div>
+
+    <h1>Cardápio de Hambúrguer</h1>
+    <div class="menu-container">
+        <div class="menu-card">
+            <img src="assets/hamb-1.png" alt="Hambúrguer 1">
+            <h3>Hambúrguer Clássico</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
+            <p class="description">Pão, carne suculenta, alface, tomate e molho especial.</p>
+            <p class="price">R$ 25,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-2.png" alt="Hambúrguer 2">
+            <h3>Cheeseburger</h3>
+            <div class="rating">⭐⭐⭐⭐☆ 4.0</div>
+            <p class="description">Pão, carne, queijo derretido e maionese da casa.</p>
+            <p class="price">R$ 30,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-3.png" alt="Hambúrguer 3">
+            <h3>Hambúrguer Duplo</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
+            <p class="description">Dois hambúrgueres suculentos com queijo e bacon.</p>
+            <p class="price">R$ 40,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-4.png" alt="Hambúrguer 4">
+            <h3>Hambúrguer Bacon</h3>
+            <div class="rating">⭐⭐⭐⭐☆ 4.0</div>
+            <p class="description">Hambúrguer com crocante bacon e queijo cheddar.</p>
+            <p class="price">R$ 35,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-5.png" alt="Hambúrguer 5">
+            <h3>Hambúrguer BBQ</h3>
+            <div class="rating">⭐⭐⭐⭐☆ 4.0</div>
+            <p class="description">Carne grelhada com molho barbecue e cebola crispy.</p>
+            <p class="price">R$ 32,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-6.png" alt="Hambúrguer 6">
+            <h3>Hambúrguer de Grão de Bico</h3>
+            <div class="rating">⭐⭐⭐⭐☆ 4.0</div>
+            <p class="description">Hambúrguer de grão de bico com salada fresca.</p>
+            <p class="price">R$ 33,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-7.png" alt="Hambúrguer 7">
+            <h3>Hambúrguer</h3>
+            <div class="rating">⭐⭐⭐⭐☆ 4.0</div>
+            <p class="description">Pão, carne, queijo derretido e maionese da casa.</p>
+            <p class="price">R$ 20,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/hamb-8.png" alt="Hambúrguer 8">
+            <h3>Hambúrguer Vegetariano</h3>
+            <div class="rating">⭐⭐⭐☆☆ 3.0</div>
+            <p class="description">Hambúrguer de grão de bico com salada fresca.</p>
+            <p class="price">R$ 15,00</p>
+        </div>
+    </div>
+
+    <h1>Cardápio de Bebidas</h1>
+    <div class="menu-drink">
+        <div class="menu-card">
+            <img src="assets/refri-1.png" alt="Bebida 1">
+            <h3>Refrigerante Coca-Cola</h3>
+            <p class="price">R$ 5,00</p>
+        </div>
+        <div class="menu-card">
+            <img src="assets/refri-2.png" alt="Bebida 2">
+            <h3>Refrigerante Guaraná</h3>
+            <p class="price">R$ 5,00</p>
+        </div>
+    </div>
+
+    <script>
+        
+// Transição entre páginas
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.transition-overlay');
+    overlay.classList.remove('active');
+});
+
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Só aplica para links internos
+        if (this.hostname === window.location.hostname) {
+            e.preventDefault();
+            const href = this.href;
+
+            const overlay = document.querySelector('.transition-overlay');
+            overlay.classList.add('active');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        }
+    });
+});
+
+        window.addEventListener('scroll', function() {
+            var menu = document.getElementById('menu');
+            if (window.scrollY > 50) {
+                menu.style.background = "rgba(0, 0, 0, 0.8)";
+            } else {
+                menu.style.background = "transparent";
+            }
+        });
+
+        // Menu Hamburguer
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um item
+        document.querySelectorAll('.nav-list a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.nav-list').classList.remove('active');
+                document.querySelector('.menu-toggle').classList.remove('active');
+            });
+        });
+
+
+    </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Égua! Burguer</h4>
+            <p>Av. Duque de Caxias, 1225<br>
+            Bairro do Marco<br>
+            Belém - PA</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>Tel: (91) 98772-3939<br>
+            Email: EguaBurg@gmail.com<br>
+            Horário: 18h - 00h (Todos os dias)</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Égua! Burguer │ Todos os direitos reservados</p>
+    </div>
+</footer>
+
+</body>
+</html>

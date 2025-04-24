@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Égua! Burguer - O Melhor Hambúrguer de Belém!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon/logo4.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="transition-overlay"></div> <!-- Efeito de transição -->
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div id="inicio" class="logo"><img src="assets/logo4.png" width="120px" alt="Logo Égua! Burguer"/></div><!--logo-->
+        
+            <!-- menu hamburguer :O -->
+            <div class="menu-toggle">☰</div>
+
+            <nav>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                    <li><a href="sobrenos.html" class="active">Sobre</a></li>
+                    <li><a href="formulario.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Seção principal -->
+    <section class="principal">
+        <img class="imagem" src="assets/Hamb_copiar-removebg-preview (1).png" alt="Hambúrguer artesanal"/>
+        <div class="subtitulo">
+            <h2 class="h2"><span style="color: #FFC300;"><u>O Melhor</u></span> hambúrguer da cidade!</h2>
+            <p class="p">Venha experimentar nossos hambúrgueres artesanais, <br> preparados com os melhores ingredientes.</p>
+            <a href="cardapio.html" class="botao">Ver Cardápio!</a>
+        </div>
+    </section>
+    
+<!--Footer-->
+<footer id="contato" class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Égua! Burguer</h4>
+            <p>Av. Duque de Caxias, 1225<br>
+            Bairro do Marco<br>
+            Belém - PA</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>Tel: (91) 98772-3939<br>
+            Email: EguaBurg@gmail.com<br>
+            Horário: 18h - 00h (Todos os dias)</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Égua! Burguer │ Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<script>
+
+// Transição entre páginas
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.transition-overlay');
+    overlay.classList.remove('active');
+});
+
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Só aplica para links internos
+        if (this.hostname === window.location.hostname) {
+            e.preventDefault();
+            const href = this.href;
+
+            const overlay = document.querySelector('.transition-overlay');
+            overlay.classList.add('active');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        }
+    });
+});
+    
+document.addEventListener('DOMContentLoaded', function() {
+    const botao = document.querySelector('.botao');  
+
+    
+    botao.addEventListener('click', function() {
+        botao.textContent = 'Você clicou no botão!';  
+        botao.style.backgroundColor = '#c90000';  
+    });
+
+    
+    console.log('Bem-vindo ao nosso site!');
+});
+
+// Menu Hamburguer
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um item
+document.querySelectorAll('.nav-list a').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('.nav-list').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const botao = document.querySelector('.botao');  
+
+    
+    botao.addEventListener('click', function() {
+        botao.textContent = 'Você clicou no botão!';  
+        botao.style.backgroundColor = '#c90000';  
+    });
+
+    console.log('Bem-vindo ao nosso site!');
+});
+
+window.onload = function() {
+    alert('Bem-vindo ao nosso site!');
+};
+</script>
+</body>
+
+</html>

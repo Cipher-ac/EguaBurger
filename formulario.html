@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="icon" href="assets/logo4.png" type="image/png">
+</head>
+<body>
+    <div class="transition-overlay"></div> <!-- Adicione esta linha logo após a tag <body> -->
+
+    <header>
+            <!-- Cabeçalho -->
+        <div class="container">
+            <div id="inicio" class="logo"><img src="assets/logo4.png" width="120px" alt="Logo Égua! Burguer"/></div><!--logo-->
+            
+            <!-- menu hamburguer :O -->
+            <div class="menu-toggle">☰</div>
+
+            <nav>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                    <li><a href="sobrenos.html" class="active">Sobre</a></li>
+                    <li><a href="formulario.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="feedback">
+        <h1>Gostaríamos de ouvir sua opinião sobre nosso atendimento!</h1>
+        <h2>Ou, se preferir, envie um e-mail para EguaBurg@gmail.com, ou mande uma mensagem pelo WhatsApp: (91) 98772-3939</h2>
+        <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <span class="error" id="erroNome">O nome deve ter pelo menos 3 caracteres.</span>
+    
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+            <span class="error" id="erroEmail">E-mail inválido.</span>
+    
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Digite seu telefone">
+            <span class="error" id="erroTelefone">Número inválido (use o formato: (XX) XXXXX-XXXX).</span>
+            <label for="comentario">Avaliação:</label>
+            <textarea name="comentario" id="comentario" cols="30" rows="10" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <script>
+            document.getElementById("nome").addEventListener("input", function() {
+                let nome = this.value;
+                let erroNome = document.getElementById("erroNome");
+                erroNome.style.display = nome.length >= 3 ? "none" : "block";
+            });
+    
+            document.getElementById("email").addEventListener("input", function() {
+                let email = this.value;
+                let erroEmail = document.getElementById("erroEmail");
+                let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                erroEmail.style.display = regexEmail.test(email) ? "none" : "block";
+            });
+    
+            document.getElementById("telefone").addEventListener("input", function() {
+                let telefone = this.value.replace(/\D/g, ""); 
+                let erroTelefone = document.getElementById("erroTelefone");
+    
+                if (telefone.length >= 11) {
+                    telefone = `(${telefone.slice(0, 2)}) ${telefone.slice(2, 7)}-${telefone.slice(7, 11)}`;
+                }
+                this.value = telefone;
+    
+                erroTelefone.style.display = telefone.length === 15 ? "none" : "block";
+            });
+    
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+                let nomeValido = document.getElementById("erroNome").style.display === "none";
+                let emailValido = document.getElementById("erroEmail").style.display === "none";
+                let telefoneValido = document.getElementById("erroTelefone").style.display === "none";
+    
+                if (!nomeValido || !emailValido || !telefoneValido) {
+                    alert("Preencha todos os campos corretamente!");
+                    event.preventDefault();
+                } else {
+                    alert("Avaliação enviada com sucesso!");
+                }
+            });
+            // Menu Hamburguer
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                const navList = document.querySelector('.nav-list');
+                navList.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            // Fechar menu ao clicar em um item
+            document.querySelectorAll('.nav-list a').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelector('.nav-list').classList.remove('active');
+                    document.querySelector('.menu-toggle').classList.remove('active');
+                });
+            });
+// Transição entre páginas
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.transition-overlay');
+    overlay.classList.remove('active');
+});
+
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+
+        if (this.hostname === window.location.hostname) {
+            e.preventDefault();
+            const href = this.href;
+
+            const overlay = document.querySelector('.transition-overlay');
+            overlay.classList.add('active');
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        }
+    });
+});
+        </script>
+    </section>
+
+ <!--Contato-->
+<footer id="contato" class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Égua! Burguer</h4>
+            <p>Av. Duque de Caxias, 1225<br>
+            Bairro do Marco<br>
+            Belém - PA</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>Tel: (91) 98772-3939<br>
+            Email: EguaBurg@gmail.com<br>
+            Horário: 18h - 00h (Todos os dias)</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Égua! Burguer │ Todos os direitos reservados</p>
+    </div>
+</footer>
+</body>
+</html>

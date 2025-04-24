@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/Design\ sem\ nome\ \(3\).png');
+    backdrop-filter: blur(2px);
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 2.0rem;
+    background-size: cover; 
+    background-position: center left -200px;
+    background-repeat: no-repeat; 
+  
+}
+
+form {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 10px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+
+input {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+h1 {
+    margin-top: 190px;
+    color: #FFC300;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+  color: #FFC300;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+input, textarea, select {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 95%;
+    background-color: #FFC300;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 7px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(27, 27, 27, 0.87); 
+  padding: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  height: 100px;
+  margin: 10px 30px; 
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  
+}
+
+header .container {
+  width: 90%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-right: 70px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; 
+  flex-grow: 1; 
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  justify-content: center; 
+}
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out; 
+}
+
+header nav ul li a:hover {
+  color: #FFC300;
+}
+
+/*logo*/
+.logo{
+  background-color: #FFC300;
+  height: 120px;
+  margin-left: 0%;
+  margin-top: 0px;
+  border-radius: 5px 5px 5px 5px;
+
+}
+
+/* Rodapé */
+.footer {
+  background: #222;
+  color: white;
+  padding: 4rem 5% 0;
+  margin-top: 4rem;
+  font-size: 1.0rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 3rem;
+}
+
+.footer-section h4 {
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-section p, .footer-section li {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 2rem 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p:first-child{
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem; 
+}
+/* Botão de menu hamburguer */
+.menu-toggle {
+  display: none; /* Inicialmente oculto, será exibido em telas menores */
+  font-size: 2rem; /* Tamanho maior para facilitar o clique */
+  color: white;
+  cursor: pointer; /* Cursor de clique */
+  padding: 10px;
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  margin-right: 20px;
+}
+
+/* Quando o menu está ativo, o botão de menu muda para um "X" */
+.menu-toggle.active {
+  color: #FFC300; /* Cor quando o menu estiver ativo */
+}
+
+/* Exibir o botão de menu apenas em telas pequenas */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Exibe o botão em dispositivos móveis */
+      margin-left: 20px; /* Adiciona espaçamento lateral */
+  }
+
+  /* Estilo para o menu quando ele estiver aberto (após o clique) */
+  .nav-list.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100px; /* Ajuste a posição do menu */
+      left: 0;
+      right: 0;
+      background-color: #1b1b1bde;
+      padding: 20px;
+      z-index: 999; /* Coloca o menu sobre o conteúdo */
+      border-radius: 0px 0px 10px 10px; /* Arredondando as bordas inferiores */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+}
+
+  .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .menu-card {
+      width: 100%; 
+      max-width: 300px;
+  }
+
+  .nav-list {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+
+.nav-list {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav-list li {
+  margin: 10px 0;
+}
+}
+
+
+@media (max-width: 1024px) {
+  /* Ajustes para tablets */
+  .principal {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .imagem {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .principal .subtitulo {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .principal .subtitulo h2 {
+    font-size: 32px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para dispositivos médios */
+  header {
+    margin: 15px;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .logo {
+    margin: 20px auto;
+    height: 120px;
+    border-radius: 0 0 40px 40px;
+  }
+
+  nav {
+    display: none; /* Esconde o menu em mobile */
+  }
+
+  /* Menu hamburguer para mobile */
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background: #1b1b1bde;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para smartphones */
+  body {
+    padding: 20px 0;
+    height: auto;
+    background-size: auto;
+  }
+
+  .imagem {
+    width: 250px;
+    height: 250px;
+  }
+
+  .principal .subtitulo h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .principal .subtitulo p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .botao {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.transition-overlay.active {
+  opacity: 1;
+}
