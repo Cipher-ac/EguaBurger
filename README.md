@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=ffc300&text=Égua!%20Burguer&fontAlignY=45&fontSize=55&fontColor=ffffff">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=ffc300&text=Égua!%20Burguer&fontAlignY=50&fontSize=55&fontColor=ffffff">
 </p>
 
 > [!NOTE]
