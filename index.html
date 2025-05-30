@@ -1,137 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Égua! Burguer - O Melhor Hambúrguer de Belém!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon/logo4.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #ffc107;
+    }
+    a {
+      color: #ffc107;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #1e1e1e;
+    }
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+    tr:nth-child(odd) {
+      background-color: #1a1a1a;
+    }
+    img {
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="transition-overlay"></div> <!-- Efeito de transição -->
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container">
-            <div id="inicio" class="logo"><img src="assets/logo4.png" width="120px" alt="Logo Égua! Burguer"/></div><!--logo-->
-        
-            <!-- menu hamburguer :O -->
-            <div class="menu-toggle">☰</div>
+<div align="center">
+   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=250&color=FFC107&text=Égua!%20Burguer&fontColor=ffffff&fontSize=55&fontAlign=50&fontAlignY=40" />
+</div>
 
-            <nav>
-                
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active">Início</a></li>
-                    <li><a href="cardapio.html" class="active">Cardápio</a></li>
-                    <li><a href="sobrenos.html" class="active">Sobre</a></li>
-                    <li><a href="formulario.html" class="active">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
+<h2>1. Informações Gerais do Projeto</h2>
+<p><strong>• Nome do Site:</strong> Égua! Burguer</p>
 
-    <!-- Seção principal -->
-    <section class="principal">
-        <img class="imagem" src="assets/Hamb_copiar-removebg-preview (1).png" alt="Hambúrguer artesanal"/>
-        <div class="subtitulo">
-            <h2 class="h2"><span style="color: #FFC300;"><u>O Melhor</u></span> hambúrguer da cidade!</h2>
-            <p class="p">Venha experimentar nossos hambúrgueres artesanais, <br> preparados com os melhores ingredientes.</p>
-            <a href="cardapio.html" class="botao">Ver Cardápio!</a>
-        </div>
-    </section>
-    
-<!--Footer-->
-<footer id="contato" class="footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h4>Égua! Burguer</h4>
-            <p>Av. Duque de Caxias, 1225<br>
-            Bairro do Marco<br>
-            Belém - PA</p>
-        </div>
+<p><strong>• Descrição do projeto:</strong> O site criado tem como objetivo principal anunciar, de maneira simples e interativa, os produtos ofertados por uma hamburgueria. Tudo isto a fim de possibilitar que seus clientes conheçam o cardápio e explorem suas opções de compra por meio de uma página web com boa usabilidade e eficiência.</p>
 
-        <div class="footer-section">
-            <h4>Contato</h4>
-            <p>Tel: (91) 98772-3939<br>
-            Email: EguaBurg@gmail.com<br>
-            Horário: 18h - 00h (Todos os dias)</p>
-        </div>
-    </div>
+<p><strong>• Equipe:</strong> Yasmim Gama, Renato Reis, Pedro Augusto, Adryel Marcelo e Eduardo Santa Rosa.</p>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 Égua! Burguer │ Todos os direitos reservados</p>
-    </div>
-</footer>
+<h2>2. Tecnologias/ferramentas Usadas:</h2>
+<p align="left">
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+<img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+</p>
 
-<script>
+<h2>3. Estrutura e Navegação</h2>
+<div align="justify">
+O site contém seis páginas, uma para cada seção do menu horizontal superior implementado. As seções contidas nesse menu são "Início", "Cardápio", "Sobre", "Contato", "Novidades" e "Avaliações". Ademais, a navegação pelo site se dá ao clicar em alguma destas seções. Com isso a página fará uma transição suave usando o efeito.
+</div>
 
-// Transição entre páginas
-document.addEventListener('DOMContentLoaded', function() {
-    const overlay = document.querySelector('.transition-overlay');
-    overlay.classList.remove('active');
-});
+<h2>4. Funcionalidades Implementadas</h2>
+<table>
+  <tr>
+    <th>Funcionalidade</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td><strong>Botão "Ver Cardápio!"</strong></td>
+    <td>Leva o usuário para a tela de cardápios</td>
+  </tr>
+  <tr>
+    <td><strong>Formulário de opinião</strong></td>
+    <td>Permite o usuário enviar seu feedback por meio de um formulário de opinião</td>
+  </tr>
+  <tr>
+    <td><strong>Menu interativo</strong></td>
+    <td>Um menu superior horizontal, no qual ao clicar em suas seções o usuário pode navegar pelas páginas do site</td>
+  </tr>
+</table>
 
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Só aplica para links internos
-        if (this.hostname === window.location.hostname) {
-            e.preventDefault();
-            const href = this.href;
+<h3>4.1. Funcionalidades Futuras</h3>
+<div align="justify">
+<strong>• Rastreamento em Tempo Real:</strong> Incluiríamos um acompanhamento de pedidos em tempo real, desde a preparação até a entrega, após o pedido do usuário ser confirmado.
+<br />
+<br />
+<strong>• Montagem Personalizada de Lanches:</strong> Adicionaríamos uma função que permite com que o cliente monte seu próprio hambúrguer e escolha quais ingredientes serão colocados nele, como o tipo de pão, carne, queijo, molhos etc.
+<br />
+<br />
+<strong>• Programada de Fidelidade com Pontos:</strong> Nesta funcionalidades os usuários acumulariam pontos a cada compra realizada. Esses pontos podem ser trocados por descontos, brindes ou produtos exclusivos.
+</div>
 
-            const overlay = document.querySelector('.transition-overlay');
-            overlay.classList.add('active');
+<h2>5. Decisões de Design</h2>
+<div align="justify">
+Com o auxílio do CSS implementamos um design eficiente e de fácil usabilidade. Logo, buscamos evitar adicionar uma quantidade exacerbada de botões e ícones, colocando apenas o necessário para uma boa navegação. Além disso, usamos a Psicologia das Cores, ciência que estuda o impacto das cores nas emoções e comportamentos humanos, para selecionar os tons mais apropriados e proporcionar um ambiente confortável para o usuário, sendo as cores escolhidas o amarelo, o vermelho e o preto. Também utilizamos tais cores para destacar palavras, botões e seções.
+</div>
+<br />
+<p align= "left">
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%201jpg.jpg?raw=true" width="300" />
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%202.jpg?raw=true" width="300" />
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%203.jpg?raw=true" width="300" /> 
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%204.jpg?raw=true" width="300" />  
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%205.jpg?raw=true" width="300" />
+<img src = "https://github.com/YasmimGama/EguaBurger/blob/patch-1/%C3%89GUABURGUER%20TELA%206.jpg?raw=true" width="300" /> 
+</p>
 
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500);
-        }
-    });
-});
-    
-document.addEventListener('DOMContentLoaded', function() {
-    const botao = document.querySelector('.botao');  
+<h2>6. Instruções de Execução</h2>
+<ol>
+  <li><strong>Faça o download das pastas/arquivos do repositório;</strong></li>
+    Acesse o nosso repositório do EduVerse e faça o download de todos os arquivos e pastas do projeto. Você pode fazer isso usando a opção de download direto (baixando como um arquivo .zip) ou clonando o repositório usando o Git.
+<br />
+<br />
+  <li><strong>Extraia os arquivos da pasta zipada;</strong></li>
+    Vá nos arquivos "Downloads" do seu computador e localize a pasta "Égua Burguer.rar". Abra a pasta e no canto superior direito clique no botão "Extrair para". Após isto sua pasta estará descompactada.
+  <br />
+  <br />
+  <li><strong>Procure o arquivo index.html.</strong></li>
+    Dentro da pasta do projeto localize o arquivo index.html. Clique duas vezes nele e pronto! O site abrirá no seu navegador localmente.
+</ol>
 
-    
-    botao.addEventListener('click', function() {
-        botao.textContent = 'Você clicou no botão!';  
-        botao.style.backgroundColor = '#c90000';  
-    });
-
-    
-    console.log('Bem-vindo ao nosso site!');
-});
-
-// Menu Hamburguer
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    const navList = document.querySelector('.nav-list');
-    navList.classList.toggle('active');
-    this.classList.toggle('active');
-});
-
-// Fechar menu ao clicar em um item
-document.querySelectorAll('.nav-list a').forEach(item => {
-    item.addEventListener('click', () => {
-        document.querySelector('.nav-list').classList.remove('active');
-        document.querySelector('.menu-toggle').classList.remove('active');
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const botao = document.querySelector('.botao');  
-
-    
-    botao.addEventListener('click', function() {
-        botao.textContent = 'Você clicou no botão!';  
-        botao.style.backgroundColor = '#c90000';  
-    });
-
-    console.log('Bem-vindo ao nosso site!');
-});
-
-window.onload = function() {
-    alert('Bem-vindo ao nosso site!');
-};
-</script>
 </body>
-
 </html>
