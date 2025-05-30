@@ -31,7 +31,7 @@ O site contém seis páginas, uma para cada seção do menu horizontal superior 
 |     `Funcionalidade`      |     `Descrição`      |
 |:-------------:|:-------------:|
 | **Botão "Ver Cardápio!"** | Leva o usuário para a tela de cardápios     | **Botão "Deixe sua Avaliação!"**    | Leva o usuário para a tela "Contato", onde está presente o formulário de opinião  |
-| **Formulário de opinião** | Permite o usuário enviar seu feedback por meio de um formulário de opinião    | **Chats** | Permite enviar mensagems dentro do App      |
+| **Formulário de opinião** | Permite o usuário enviar seu feedback por meio de um formulário de opinião    | 
 | **Menu interativo** | Um menu superior horizontal, no qual ao clicar em suas seções o usuário pode navegar pelas páginas do site|
 
 ### 4.1. Funcionalidades Futuras
