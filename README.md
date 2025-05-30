@@ -3,7 +3,7 @@
 > [!NOTE]
 > Veja a página Web do nosso ReadMe clicando no link abaixo :point_down:
 > 
-> 
+> https://yasmimgama.github.io/EguaBurger/
 
 # 1. Informações Gerais do Projeto:
 **• Nome do Site:** Égua! Burguer
