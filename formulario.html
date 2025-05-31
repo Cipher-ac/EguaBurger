@@ -25,6 +25,8 @@
                     <li><a href="cardapio.html" class="active">Cardápio</a></li>
                     <li><a href="sobrenos.html" class="active">Sobre</a></li>
                     <li><a href="formulario.html" class="active">Contato</a></li>
+                    <li><a href="novidades.html" class="active">Novidades</a></li>
+                    <li><a href="Avaliações.html" class="active">Avaliações</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,6 +48,14 @@
             <input type="text" id="telefone" placeholder="Digite seu telefone">
             <span class="error" id="erroTelefone">Número inválido (use o formato: (XX) XXXXX-XXXX).</span>
             <label for="comentario">Avaliação:</label>
+            <div class="star-rating">
+                
+  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 estrelas"></label>
+  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrelas"></label>
+  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrelas"></label>
+  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrelas"></label>
+  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrela"></label>
+            </div>
             <textarea name="comentario" id="comentario" cols="30" rows="10" required></textarea>
             <button type="submit">Enviar</button>
         </form>

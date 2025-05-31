@@ -230,13 +230,6 @@ header nav ul li a:hover {
       z-index: 999; /* Coloca o menu sobre o conteúdo */
       border-radius: 0px 0px 10px 10px; /* Arredondando as bordas inferiores */
   }
-}
-
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-}
 
   .menu-container {
       display: flex;
@@ -255,16 +248,9 @@ header nav ul li a:hover {
       text-align: center;
   }
 
-.nav-list {
-  display: none;
-  width: 100%;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.nav-list li {
-  margin: 10px 0;
-}
+  .nav-list li {
+      margin: 10px 0;
+  }
 }
 
 
@@ -387,4 +373,29 @@ header nav ul li a:hover {
 
 .transition-overlay.active {
   opacity: 1;
+}
+.star-rating {
+  direction: rtl;
+  display: inline-flex;
+  font-size: 2rem;
+  user-select: none;
+}
+.star-rating input[type="radio"] {
+  display: none;
+}
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 2px;
+}
+.star-rating label:before {
+  content: "★";
+}
+.star-rating input[type="radio"]:checked ~ label {
+  color: #FFD700;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #FFD700;
 }
